@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the Backend API!' });
 });
 
-app.get('/tasks', async (req, res) => {
+app.get('api/tasks', async (req, res) => {
   try {
     const tasks = await prisma.task.findMany();
     res.json(tasks);
@@ -22,7 +22,7 @@ app.get('/tasks', async (req, res) => {
   }
 });
 
-app.post('/tasks', async (req, res) => {
+app.post('api/tasks', async (req, res) => {
   const { title } = req.body;
   try {
     const newTask = await prisma.task.create({
@@ -34,7 +34,7 @@ app.post('/tasks', async (req, res) => {
   }
 });
 
-app.put('/tasks/:id', async (req, res) => {
+app.put('api/tasks/:id', async (req, res) => {
     const { id } = req.params;
     const { title, completed } = req.body;
   
@@ -54,7 +54,7 @@ app.put('/tasks/:id', async (req, res) => {
     }
   });
 
-app.delete('/tasks/:id', async (req, res) => {
+app.delete('api/tasks/:id', async (req, res) => {
     const { id } = req.params;
   
     try {
