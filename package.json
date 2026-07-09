@@ -1,13 +1,13 @@
 {
   "name": "fullstack-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module", 
   "scripts": {
-  "test": "echo \"Not implemented yet\"",
-  "dev": "tsx watch src/index.ts",
-  "build": "npx tsc",
-  "start": "node dist/index.js"
-},
+    "test": "echo \"Not implemented yet\"",
+    "dev": "tsx watch src/index.ts",
+    "build": "npx tsc",
+    "start": "node dist/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
