@@ -21,6 +21,8 @@ jobs:
 
       - name: Generate Prisma Client
         run: npx prisma generate
+        env:
+          DATABASE_URL: "postgresql://neondb_owner:npg_BRKGdQC5IEn6@ep-quiet-moon-aox1lhuq.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
 
       - name: Check Code Style (Linting)
         run: npm run lint --if-present
